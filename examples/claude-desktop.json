@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "puppetry": {
+      "command": "npx",
+      "args": ["-y", "@puppetry.com/mcp-server"],
+      "env": { "PUPPETRY_API_KEY": "pk_live_your_api_key_here" }
+    }
+  }
+}

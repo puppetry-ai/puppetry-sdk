@@ -1,0 +1,19 @@
+# MCP directory listing for smithery.ai + glama.ai
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    properties:
+      PUPPETRY_API_KEY:
+        type: string
+        description: "Your Puppetry API key (starts with pup_). Get one at puppetry.com → Settings → API Keys."
+    required:
+      - PUPPETRY_API_KEY
+  commandFunction: |-
+    (config) => ({
+      command: 'npx',
+      args: ['-y', '@puppetry.com/mcp-server'],
+      env: {
+        PUPPETRY_API_KEY: config.PUPPETRY_API_KEY
+      }
+    })

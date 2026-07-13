@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.puppetry/mcp-server",
+  "description": "Turn a portrait photo and a script into a talking-head AI video via the Puppetry API.",
+  "websiteUrl": "https://www.puppetry.com/developer",
+  "version": "0.1.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@puppetry.com/mcp-server",
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "PUPPETRY_API_KEY",
+          "description": "Puppetry Developer API key (pk_live_...) from Studio settings at https://www.puppetry.com/studio/settings/api-keys",
+          "isRequired": true,
+          "format": "string",
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
